@@ -15,7 +15,7 @@ export const auth = async (req: Request, res: Response, next: NextFunction) => {
       return res.status(401).json({ message: "Authentication required" });
     }
 
-    const decoded = jwt.verify(token, process.env.JWT_SECRET as string) as JwtPayload;
+    const decoded = jwt.verify(token, process.env.SECRET_KEY as string) as JwtPayload;
     const userRepository = AppDataSource.getRepository(User);
     const user = await userRepository.findOne({ where: { id: decoded.userId } });
 
