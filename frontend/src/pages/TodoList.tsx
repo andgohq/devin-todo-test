@@ -99,7 +99,7 @@ const TodoList = () => {
               type="text"
               value={newTodo.title}
               onChange={(e) => setNewTodo({ ...newTodo, title: e.target.value })}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow border rounded w-full py-2 px-3 text-gray-900 bg-white leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500"
               required
             />
           </div>
@@ -112,7 +112,7 @@ const TodoList = () => {
               id="description"
               value={newTodo.description}
               onChange={(e) => setNewTodo({ ...newTodo, description: e.target.value })}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow border rounded w-full py-2 px-3 text-gray-900 bg-white leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500"
               rows={3}
             />
           </div>
